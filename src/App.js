@@ -12,7 +12,8 @@ import {
   Home,
   Login,
   Product,
-  Register
+  Register,
+  Store
 } from "./pages/index";
 //layout
 import { Header } from "./layout/index";
@@ -23,6 +24,15 @@ const GlobalStyle = createGlobalStyle`
     color: #fff;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
   }
+  body::-webkit-scrollbar {
+    width: 9px; 
+    background: #000;        
+}
+  body::-webkit-scrollbar-thumb{
+    background: #3B3C3D;
+    border-radius: 10px;
+  }
+}
 `;
 
 export default function App() {
@@ -33,6 +43,9 @@ export default function App() {
       <Router>
         <Header />
         <Switch>
+          <Route path="/store">
+            <Store />
+          </Route>
           <Route path="/articulo">
             <Articulo />
           </Route>

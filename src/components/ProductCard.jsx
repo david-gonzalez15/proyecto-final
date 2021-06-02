@@ -2,6 +2,7 @@ import React from "react";
 //dependencies
 import styled from "styled-components";
 import { Link } from "react-router-dom";
+import { Button } from "react-bootstrap";
 
 //styled components
 const LinkCard = styled(Link)`
@@ -14,7 +15,7 @@ const Card = styled.div`
   border-radius: 20px;
   box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.16);
   background: #141414;
-  width: 32%;
+  grid-column: span 1;
   margin: 30px 0;
   min-height: 300px;
 `;

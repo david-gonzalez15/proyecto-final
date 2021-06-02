@@ -6,9 +6,11 @@ import styled from "styled-components";
 const Card = styled.div`
   display: flex;
   flex-direction: column;
-  width: 24%;
+  grid-column: span 1;
   flex-wrap: nowrap;
-  margin: 20px 0;
+  min-width: 14vw;
+
+  margin: 20px 10px;
 `;
 const Img = styled.div`
   height: 20vw;

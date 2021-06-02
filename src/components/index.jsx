@@ -7,6 +7,7 @@ import StoreCard from "./StoreCard";
 import Paginacion from "./Paginacion";
 import CheckoutCard from "./CheckoutCard";
 import Total from "./Total";
+import ProductosRelacionados from "./ProductosRelacionados";
 
 export {
   ArticuloCard,
@@ -17,5 +18,6 @@ export {
   StoreCard,
   Paginacion,
   CheckoutCard,
-  Total
+  Total,
+  ProductosRelacionados
 };

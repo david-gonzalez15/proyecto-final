@@ -18,7 +18,7 @@ const Card = styled.div`
   border-radius: 20px;
   box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.16);
   background: #141414;
-  width: 100%;
+  grid-column: 1/-1;
   margin: 30px 0;
   min-height: 300px;
   height: 25vw;

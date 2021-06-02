@@ -24,9 +24,9 @@ const HomeContainer = styled(Container)`
   max-width: 1000px;
 `;
 const Products = styled.div`
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
 `;
 const LinkMenu = styled(Link)`
   text-decoration: none;

@@ -25,9 +25,8 @@ const Products = styled.div`
   max-width: 1000px;
   margin: auto;
   width: 80%;
-  display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
 `;
 const Navigation = styled.nav`
   display: flex;

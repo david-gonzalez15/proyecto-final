@@ -12,6 +12,7 @@ const ContainerHeader = styled(Container)`
   padding: 0 30px;
   background: #000;
   height: 80px;
+  border-radius: 0 0 20px 20px;
 `;
 const Logotipo = styled.h2``;
 const Item = styled(Link)`
@@ -31,9 +32,6 @@ const Header = () => {
           <Logotipo>Odessey</Logotipo>
         </Item>
 
-        <Menu>
-          <Item to="/blog">Blog</Item>
-        </Menu>
         <Menu>
           <Item to="/login">Iniciar Sesion</Item>
           <Item to="/register">Registrarme</Item>

@@ -7,13 +7,13 @@ $mode: cubic-bezier(0.17, 0.67, 0.55, 1.43);
     
   }
   25% {
-    transform: scale(1.2);
+    transform: scale(1);
   }
   50% {
     transform: scale(1);
   }
   75% {
-    transform: scale(1.2);
+    transform: scale(1);
   }
   100% {
     transform: scale(1);
@@ -44,7 +44,7 @@ $mode: cubic-bezier(0.17, 0.67, 0.55, 1.43);
         z-index: 0;
         left: 0;
         top: 0;
-        width: 118%;
+        width: 117%;
         margin: auto;
         //height: 100%;
         transition: z-index 0ms $delay;

@@ -38,13 +38,13 @@ const LateralMenu = () => {
           <Link to="/">
             <AiFillHome color="#fff" />
           </Link>
-          <Link to="/">
+          <Link to="/store">
             <BiStore />
           </Link>
-          <Link to="/">
+          <Link to="/checkout">
             <FiShoppingCart />
           </Link>
-          <Link to="/">
+          <Link to="/blog">
             <BsPeopleFill />
           </Link>
         </IconContext.Provider>

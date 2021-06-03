@@ -1,7 +1,8 @@
-import React from "react";
+import React, { useEffect } from "react";
 //dependencies
 import styled from "styled-components";
 import { Link } from "react-router-dom";
+
 //styled components
 const LinkCard = styled(Link)`
   color: #0cb7ec;
@@ -10,23 +11,30 @@ const LinkCard = styled(Link)`
 const Card = styled.div`
   display: flex;
   flex-direction: column;
-  border-radius: 20px;
-  box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.16);
+  border-radius: 10px;
+  border: 1px solid #e1e1e1;
   background: #fff;
-  width: 32%;
+  grid-column: span 1;
   margin: 30px 0;
-  min-height: 300px;
+  /* min-height: 300px; */
+  transition: ease 0.3s;
+  margin: 5px;
+  :hover {
+    transform: translate(-2px, -10px);
+    box-shadow: 5px 8px 10px rgba(0, 0, 0, 0.1);
+    transition: ease 0.3s;
+  }
 `;
 const Info = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: space-around;
-  color: #141414;
   width: 100%;
-  padding: 20px 40px;
+  padding: 20px;
   box-sizing: border-box;
-  > h3 {
-    font-size: 1.5em;
+  font-size: 1.125em;
+  p {
+    color: #697477;
   }
 `;
 const ImgContainer = styled.div`
@@ -35,7 +43,7 @@ const ImgContainer = styled.div`
     width: 100%;
     object-fit: cover;
     height: 100%;
-    border-radius: 20px;
+    border-radius: 10px;
   }
 `;
 const ArticuloCard = ({ id, title, description, image }) => {

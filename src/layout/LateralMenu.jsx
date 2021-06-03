@@ -18,7 +18,7 @@ const LateralCard = styled.div`
   background: #141414;
   border-radius: 15px;
   box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.16);
-  z-index: 100;
+  z-index: 1000;
   width: 45px;
   height: 300px;
   position: relative;

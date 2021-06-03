@@ -5,7 +5,7 @@ import styled from "styled-components";
 import { ProductosRelacionados } from "../components/index";
 import { LateralMenu } from "../layout/index.jsx";
 import { Carousel } from "../class-conponents/carrusel/index";
-import { Button } from "react-bootstrap";
+
 //styled components
 const Main = styled.div`
   max-width: 1000px;
@@ -28,7 +28,17 @@ const Descripcion = styled.div`
   grid-column: 1/-1;
 `;
 const MenuCompra = styled.div`
-  grid-column: span 1;
+  grid-column: -2/-1;
+  display: flex;
+  justify-content: space-between;
+`;
+const Button = styled.button`
+  width: 150px;
+  background: #2094ec;
+  border-radius: 5px;
+  padding: 10px;
+  border: none;
+  color: #fff;
 `;
 
 const Product = () => {
@@ -75,8 +85,8 @@ const Product = () => {
           </article>
         </Descripcion>
         <MenuCompra>
-          <Button variant="primary">Primary</Button>{" "}
-          <Button variant="primary">Primary</Button>{" "}
+          <p>$323</p>
+          <Button>Agregar al carrito</Button> <Button>Comprar Ahora</Button>{" "}
         </MenuCompra>
       </Main>
       <ProductosRelacionados />

@@ -20,19 +20,19 @@ const Card = styled.div`
   background: #141414;
   width: 100%;
   margin: 10px 0;
-  min-height: 300px;
-  min-height: 25vw;
+  /* min-height: 300px;
+  min-height: 25vw; */
 `;
 const Info = styled.div`
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
+  justify-content: space-between;
   color: #fff;
-  width: 70%;
+  width: 80%;
   padding: 20px 40px;
   box-sizing: border-box;
   > h3 {
-    font-size: 1.5em;
+    font-size: 1.125em;
   }
   button {
     width: 150px;
@@ -44,7 +44,7 @@ const Info = styled.div`
   }
 `;
 const ImgContainer = styled.div`
-  width: 30%;
+  width: 20%;
   padding: 10px;
   > img {
     width: 100%;

@@ -8,7 +8,7 @@ import Paginacion from "./Paginacion";
 import CheckoutCard from "./CheckoutCard";
 import Total from "./Total";
 import ProductosRelacionados from "./ProductosRelacionados";
-
+import ArticulosRelacionados from "./ProductosRelacionados";
 export {
   ArticuloCard,
   Card,
@@ -19,5 +19,6 @@ export {
   Paginacion,
   CheckoutCard,
   Total,
-  ProductosRelacionados
+  ProductosRelacionados,
+  ArticulosRelacionados
 };

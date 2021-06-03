@@ -18,6 +18,12 @@ const Card = styled.div`
   grid-column: span 1;
   margin: 30px 0;
   min-height: 300px;
+  transition: ease 0.3s;
+  :hover {
+    transform: translate(-2px, -10px);
+    box-shadow: 5px 8px 10px rgba(0, 0, 0, 0.1);
+    transition: ease 0.3s;
+  }
 `;
 const Info = styled.div`
   display: flex;
@@ -63,6 +69,11 @@ const ProductCard = ({ id, title, description, image }) => {
       <Info>
         <h3>{title}</h3>
         <p>{description}</p>
+        <p>
+          <b>
+            $<span>324</span>
+          </b>
+        </p>
         <div>
           <LinkCard to="/product">
             <b>Ver</b>

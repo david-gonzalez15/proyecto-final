@@ -11,6 +11,12 @@ const Card = styled.div`
   min-width: 14vw;
 
   margin: 20px 10px;
+  transition: ease 0.3s;
+  :hover {
+    transform: translate(-2px, -10px);
+    box-shadow: 5px 8px 10px rgba(0, 0, 0, 0.1);
+    transition: ease 0.3s;
+  }
 `;
 const Img = styled.div`
   height: 20vw;

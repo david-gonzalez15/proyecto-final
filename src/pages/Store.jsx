@@ -24,9 +24,9 @@ const Container = styled.div`
 const Products = styled.div`
   max-width: 1000px;
   margin: auto;
-  width: 80%;
+  width: 100%;
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(5, 1fr);
 `;
 const Navigation = styled.nav`
   display: flex;
@@ -104,7 +104,7 @@ const Store = () => {
           <StoreCard
             title="videojuegos"
             price={234}
-            image="https://www.enter.co/wp-content/uploads/2021/05/cyberpunk-2077-3-scaled-1-768x432.jpg"
+            image="https://m.media-amazon.com/images/M/MV5BOGM3MTlhM2QtNWE5NC00NGEwLWJlYWYtMGJkNzYwMmIzMTRiXkEyXkFqcGdeQXVyNDIwOTkyNjM@._V1_.jpg"
           />
           <StoreCard
             title="videojuegos"
@@ -114,7 +114,17 @@ const Store = () => {
           <StoreCard
             title="videojuegos"
             price={234}
-            image="https://www.enter.co/wp-content/uploads/2021/05/cyberpunk-2077-3-scaled-1-768x432.jpg"
+            image="https://cdn-products.eneba.com/resized-products/l3dYENetBWs46gkoGqosAAmI3ai0hn8w_zFMK6aTOpg_350x200_1x-0.jpeg"
+          />
+          <StoreCard
+            title="videojuegos"
+            price={234}
+            image="https://ae01.alicdn.com/kf/HTB1JgATPpXXXXcQXFXXq6xXFXXXT/Custom-Canvas-Wall-Decals-Watch-Dogs-Poster-Watch-Dogs-Sticker-Mural-Game-Wallpaper-Kid-Wall-Stickers.jpg"
+          />
+          <StoreCard
+            title="videojuegos"
+            price={234}
+            image="https://m.media-amazon.com/images/M/MV5BOGM3MTlhM2QtNWE5NC00NGEwLWJlYWYtMGJkNzYwMmIzMTRiXkEyXkFqcGdeQXVyNDIwOTkyNjM@._V1_.jpg"
           />
           <StoreCard
             title="videojuegos"
@@ -124,7 +134,17 @@ const Store = () => {
           <StoreCard
             title="videojuegos"
             price={234}
-            image="https://www.enter.co/wp-content/uploads/2021/05/cyberpunk-2077-3-scaled-1-768x432.jpg"
+            image="https://cdn-products.eneba.com/resized-products/l3dYENetBWs46gkoGqosAAmI3ai0hn8w_zFMK6aTOpg_350x200_1x-0.jpeg"
+          />
+          <StoreCard
+            title="videojuegos"
+            price={234}
+            image="https://ae01.alicdn.com/kf/HTB1JgATPpXXXXcQXFXXq6xXFXXXT/Custom-Canvas-Wall-Decals-Watch-Dogs-Poster-Watch-Dogs-Sticker-Mural-Game-Wallpaper-Kid-Wall-Stickers.jpg"
+          />
+          <StoreCard
+            title="videojuegos"
+            price={234}
+            image="https://m.media-amazon.com/images/M/MV5BOGM3MTlhM2QtNWE5NC00NGEwLWJlYWYtMGJkNzYwMmIzMTRiXkEyXkFqcGdeQXVyNDIwOTkyNjM@._V1_.jpg"
           />
           <StoreCard
             title="videojuegos"
@@ -134,42 +154,12 @@ const Store = () => {
           <StoreCard
             title="videojuegos"
             price={234}
-            image="https://www.enter.co/wp-content/uploads/2021/05/cyberpunk-2077-3-scaled-1-768x432.jpg"
+            image="https://cdn-products.eneba.com/resized-products/l3dYENetBWs46gkoGqosAAmI3ai0hn8w_zFMK6aTOpg_350x200_1x-0.jpeg"
           />
           <StoreCard
             title="videojuegos"
             price={234}
-            image="https://www.enter.co/wp-content/uploads/2021/05/cyberpunk-2077-3-scaled-1-768x432.jpg"
-          />
-          <StoreCard
-            title="videojuegos"
-            price={234}
-            image="https://cdn.cloudflare.steamstatic.com/steam/apps/1139900/capsule_616x353.jpg?t=1619464336"
-          />
-          <StoreCard
-            title="videojuegos"
-            price={234}
-            image="https://www.enter.co/wp-content/uploads/2021/05/cyberpunk-2077-3-scaled-1-768x432.jpg"
-          />
-          <StoreCard
-            title="videojuegos"
-            price={234}
-            image="https://www.enter.co/wp-content/uploads/2021/05/cyberpunk-2077-3-scaled-1-768x432.jpg"
-          />
-          <StoreCard
-            title="videojuegos"
-            price={234}
-            image="https://www.enter.co/wp-content/uploads/2021/05/cyberpunk-2077-3-scaled-1-768x432.jpg"
-          />
-          <StoreCard
-            title="videojuegos"
-            price={234}
-            image="https://www.enter.co/wp-content/uploads/2021/05/cyberpunk-2077-3-scaled-1-768x432.jpg"
-          />
-          <StoreCard
-            title="videojuegos"
-            price={234}
-            image="https://www.enter.co/wp-content/uploads/2021/05/cyberpunk-2077-3-scaled-1-768x432.jpg"
+            image="https://ae01.alicdn.com/kf/HTB1JgATPpXXXXcQXFXXq6xXFXXXT/Custom-Canvas-Wall-Decals-Watch-Dogs-Poster-Watch-Dogs-Sticker-Mural-Game-Wallpaper-Kid-Wall-Stickers.jpg"
           />
         </Products>
       </Container>

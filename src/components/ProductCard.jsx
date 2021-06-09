@@ -16,13 +16,15 @@ const Card = styled.div`
   box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.16);
   background: #141414;
   grid-column: span 1;
-  margin: 30px 0;
   min-height: 300px;
   transition: ease 0.3s;
   :hover {
     transform: translate(-2px, -10px);
     box-shadow: 5px 8px 10px rgba(0, 0, 0, 0.1);
     transition: ease 0.3s;
+    @media (max-width: 500px) {
+      transform: none;
+    }
   }
 `;
 const Info = styled.div`
@@ -33,8 +35,19 @@ const Info = styled.div`
   width: 100%;
   padding: 20px 40px;
   box-sizing: border-box;
+  @media (max-width: 500px) {
+    padding: 20px;
+  }
   > h3 {
     font-size: 1.5em;
+    @media (max-width: 580px) {
+      font-size: 0.8em;
+    }
+  }
+  > p {
+    @media (max-width: 680px) {
+      display: none;
+    }
   }
   div {
     display: flex;
@@ -48,6 +61,13 @@ const Info = styled.div`
       padding: 10px;
       border: none;
       color: #0cb7ec;
+      @media (max-width: 580px) {
+        font-size: 0.8em;
+        padding: 0px;
+      }
+    }
+    @media (max-width: 500px) {
+      flex-direction: column;
     }
   }
 `;
@@ -69,11 +89,11 @@ const ProductCard = ({ id, title, description, image }) => {
       <Info>
         <h3>{title}</h3>
         <p>{description}</p>
-        <p>
-          <b>
-            $<span>324</span>
-          </b>
-        </p>
+
+        <b>
+          $<span>324</span>
+        </b>
+
         <div>
           <LinkCard to="/product">
             <b>Ver</b>

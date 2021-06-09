@@ -13,6 +13,9 @@ const ContainerHeader = styled(Container)`
   background: #000;
   height: 80px;
   border-radius: 0 0 20px 20px;
+  @media (max-width: 500px) {
+    flex-direction: column;
+  }
 `;
 const Logotipo = styled.h2``;
 const Item = styled(Link)`

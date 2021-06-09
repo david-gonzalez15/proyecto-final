@@ -3,7 +3,7 @@ import React from "react";
 import styled from "styled-components";
 import { Link } from "react-router-dom";
 //loyout
-import { LateralMenu } from "../layout/index";
+import { LateralMenu, MenuInferior } from "../layout/index";
 //components
 import { Poster, ProductCard } from "../components/index";
 import { Carousel } from "../class-conponents/carrusel/index";
@@ -23,27 +23,43 @@ import { BiSearchAlt } from "react-icons/bi";
 
 //styled components
 const ContainerExt = styled.div`
-  position: relative;
-  left: 45px;
+  padding: 0 0 0 50px;
+  @media (max-width: 500px) {
+    padding: 5px;
+  }
 `;
 const HomeContainer = styled(Container)`
   width: 80%;
   max-width: 1000px;
   margin: auto;
+  @media (max-width: 500px) {
+    width: 100%;
+  }
 `;
 const Products = styled.div`
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 20px;
+  margin: 20px 0;
+  @media (max-width: 880px) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  @media (max-width: 500px) {
+    gap: 5px;
+  }
 `;
 const LinkMenu = styled(Link)`
   text-decoration: none;
   color: #fff;
   margin: 0 15px;
+
+  @media (max-width: 450px) {
+    font-size: 0.8em;
+  }
 `;
 const Navigation = styled.nav`
   display: flex;
-  width: 100%;
+
   justify-content: space-around;
   margin-top: 20px;
 `;
@@ -54,17 +70,22 @@ const CaruselContainer = styled.div`
   justify-content: center;
   max-width: 1500px;
   margin: auto;
+  @media (max-width: 550px) {
+    display: none;
+  }
 `;
 const Menu = styled(Container)`
   display: flex;
   width: 100%;
   justify-content: space-between;
   align-items: center;
-  padding: ;
   background: #000;
   height: 80px;
   border-radius: 0 0 20px 20px;
   margin-top: 50px;
+  @media (max-width: 450px) {
+    flex-direction: column;
+  }
 `;
 const SubMenu = styled.nav`
   display: flex;
@@ -76,7 +97,10 @@ const Buscador = styled.div`
   padding: 5px;
   background: #141414;
   max-width: 400px;
-
+  margin: 20px 0;
+  @media (max-width: 450px) {
+    width: 100%;
+  }
   > input {
     border: none;
     outline: none;
@@ -84,6 +108,7 @@ const Buscador = styled.div`
     color: #fff;
     background: #141414;
     padding: 5px 15px;
+    width: 100%;
   }
   > button {
     background: #141414;
@@ -112,14 +137,16 @@ const Home = () => {
   ];
   return (
     <>
+      <MenuInferior />
       <ContainerExt>
         <CaruselContainer>
           <Carousel slides={slides} autoplay={true} interval={4000} />
         </CaruselContainer>
         <LateralMenu />
+
         <HomeContainer>
           <Navigation>
-            <IconContext.Provider value={{ color: "#707070", size: "8em" }}>
+            <IconContext.Provider value={{ color: "#707070", size: "7em" }}>
               <AiFillHome color="#fff" />
               <MdComputer />
               <FaGamepad />

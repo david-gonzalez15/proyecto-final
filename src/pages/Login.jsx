@@ -5,8 +5,9 @@ import { FormLogin } from "../components/index";
 //styled components
 const Container = styled.div`
   width: 100%;
-  height: 10vh;
+  height: 100vh;
   position: relative;
+  z-index: -99;
   top: -80px;
   display: flex;
   justify-content: center;

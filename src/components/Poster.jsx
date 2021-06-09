@@ -22,6 +22,9 @@ const Card = styled.div`
   margin: 30px 0;
   min-height: 300px;
   height: 25vw;
+  @media (max-width: 500px) {
+    display: none;
+  }
 `;
 const Info = styled.div`
   display: flex;
@@ -31,8 +34,12 @@ const Info = styled.div`
   width: 50%;
   padding: 20px 40px;
   box-sizing: border-box;
+
   > h3 {
     font-size: 1.5em;
+    @media (max-width: 580px) {
+      font-size: 1.2em;
+    }
   }
 `;
 const ImgContainer = styled.div`

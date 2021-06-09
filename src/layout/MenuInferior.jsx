@@ -9,35 +9,30 @@ import { BiStore } from "react-icons/bi";
 import { RiShoppingCartLine } from "react-icons/ri";
 import { BsPeopleFill } from "react-icons/bs";
 //styled components
-const LateralCard = styled.div`
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: space-between;
-  padding: 20px;
-  background: #141414;
-  border-radius: 15px;
-  box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.16);
-  z-index: 1000;
-  width: 45px;
-  height: 300px;
-  position: relative;
-  top: -150px;
-  font-size: 1.5rem;
-  @media (max-width: 500px) {
-    display: none;
-  }
-`;
 const Menu = styled.div`
   position: fixed;
-  top: 50vh;
-  left: 40px;
-  @media (max-width: 880px) {
-    left: 20px;
+  top: 85vh;
+  width: 100%;
+`;
+const LateralCard = styled.div`
+  display: none;
+  align-items: center;
+  justify-content: space-around;
+  padding: 20px 0;
+  background: #141414;
+  border-radius: 15px 15px 0 0;
+  box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.16);
+  z-index: 1000;
+  width: 100%;
+  height: 45px;
+  position: relative;
+
+  @media (max-width: 500px) {
+    display: flex;
   }
 `;
 
-const LateralMenu = () => {
+const MenuInferior = () => {
   return (
     <Menu>
       <LateralCard>
@@ -59,4 +54,4 @@ const LateralMenu = () => {
     </Menu>
   );
 };
-export default LateralMenu;
+export default MenuInferior;

@@ -3,8 +3,20 @@ import React from "react";
 import styled from "styled-components";
 import { FormLogin } from "../components/index";
 //styled components
-
+const Container = styled.div`
+  width: 100%;
+  height: 10vh;
+  position: relative;
+  top: -80px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+`;
 const Login = () => {
-  return <FormLogin />;
+  return (
+    <Container>
+      <FormLogin />
+    </Container>
+  );
 };
 export default Login;

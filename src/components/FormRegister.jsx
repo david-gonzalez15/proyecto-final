@@ -29,30 +29,33 @@ const ImgContainer = styled.div`
 `;
 const FormConntainer = styled.div`
   width: 50%;
+  display: flex;
+  align-items: center;
 `;
 const Form = styled.form`
+  width: 100%;
   display: flex;
   flex-direction: column;
-  padding: 40px;
-  height: 100%;
+  padding: 30px;
   justify-content: space-between;
   align-items: center;
   box-sizing: border-box;
   input {
     width: 100%;
     padding: 15px 20px;
-    margin: 10px 0px;
+    margin: 5px 0px;
     border: none;
     border-radius: 50px;
     background: #3b3c3d;
     color: #fff;
     outline: none;
+    box-sizing: border-box;
     ::placeholder {
       color: #fff;
     }
   }
   > button {
-    margin-top: 10px;
+    margin-top: 30px;
     background: #078f30;
     border-radius: 50px;
     padding: 10px;
@@ -103,18 +106,16 @@ const Button = styled.button`
 `;
 
 // #0cb7ec
-const FormLogin = () => {
+const FormRegister = () => {
   return (
     <Container>
       <FormConntainer>
         <Form>
           <h2>Unete a nuestra comunidad</h2>
+          <input type="text" placeholder="Nombre" />
           <input type="text" placeholder="Correo electronico" />
           <input type="password" placeholder="Contraseña" />
-          <div className="terms">
-            <input type="checkbox" id="terms" />
-            <label htmlFor="terms">Terminos y condiciones</label>
-          </div>
+
           <button>Registrarme</button>
           <div className="l-social">
             <button>Facebook</button>
@@ -128,4 +129,4 @@ const FormLogin = () => {
     </Container>
   );
 };
-export default FormLogin;
+export default FormRegister;

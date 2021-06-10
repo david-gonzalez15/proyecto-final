@@ -8,9 +8,7 @@ const Card = styled.div`
   flex-direction: column;
   grid-column: span 1;
   flex-wrap: nowrap;
-  min-width: 14vw;
 
-  margin: 20px 10px;
   transition: ease 0.3s;
   :hover {
     transform: translate(-2px, -10px);
@@ -19,9 +17,12 @@ const Card = styled.div`
   }
 `;
 const Img = styled.div`
-  height: 20vw;
+  height: 15em;
   width: 100%;
   border-radius: 20px;
+  @media (max-width: 500px) {
+    height: 10em;
+  }
   > img {
     border-radius: 10px;
     width: 100%;
@@ -33,6 +34,9 @@ const Info = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
+  @media (max-width: 400px) {
+    flex-direction: column;
+  }
 `;
 
 const StoreCard = ({ title, price, image }) => {

@@ -45,7 +45,7 @@ const Products = styled.div`
     grid-template-columns: repeat(2, 1fr);
   }
   @media (max-width: 500px) {
-    gap: 5px;
+    gap: 10px;
   }
 `;
 const LinkMenu = styled(Link)`

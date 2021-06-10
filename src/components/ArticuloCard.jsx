@@ -23,6 +23,9 @@ const Card = styled.div`
     transform: translate(-2px, -10px);
     box-shadow: 5px 8px 10px rgba(0, 0, 0, 0.1);
     transition: ease 0.3s;
+    @media (max-width: 500px) {
+      transform: none;
+    }
   }
 `;
 const Info = styled.div`
@@ -33,6 +36,7 @@ const Info = styled.div`
   padding: 20px;
   box-sizing: border-box;
   font-size: 1.125em;
+
   p {
     color: #697477;
   }

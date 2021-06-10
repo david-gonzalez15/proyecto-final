@@ -2,6 +2,7 @@ import React from "react";
 //dependencies
 import { Link } from "react-router-dom";
 import styled from "styled-components";
+//components
 
 //styled components
 const LinkButton = styled(Link)`
@@ -20,6 +21,16 @@ const Card = styled.div`
   background: #141414;
   width: 100%;
   margin: 10px 0;
+  @media (max-width: 768px) {
+    border-radius: 10px;
+  }
+  @media (max-width: 400px) {
+    flex-direction: column;
+    align-items: center;
+    width: 70%;
+    margin: 10px auto;
+  }
+
   /* min-height: 300px;
   min-height: 25vw; */
 `;
@@ -31,8 +42,26 @@ const Info = styled.div`
   width: 80%;
   padding: 20px 40px;
   box-sizing: border-box;
+  @media (max-width: 768px) {
+    padding: 10px;
+  }
+  @media (max-width: 425px) {
+    width: 100%;
+    align-items: center;
+  }
   > h3 {
     font-size: 1.125em;
+    @media (max-width: 500px) {
+      font-size: 1rem;
+    }
+    @media (max-width: 425px) {
+      font-size: 0.8rem;
+    }
+  }
+  > p {
+    @media (max-width: 768px) {
+      display: none;
+    }
   }
   button {
     width: 150px;
@@ -41,16 +70,27 @@ const Info = styled.div`
     padding: 10px;
     border: none;
     color: #fff;
+    @media (max-width: 425px) {
+      padding: 5px;
+      font-size: 0.8rem;
+    }
   }
 `;
 const ImgContainer = styled.div`
   width: 20%;
+  min-width: 170px;
   padding: 10px;
+  @media (max-width: 768px) {
+    min-width: 130px;
+  }
   > img {
     width: 100%;
     object-fit: cover;
     height: 100%;
     border-radius: 20px;
+    @media (max-width: 768px) {
+      border-radius: 10px;
+    }
   }
 `;
 const CheckoutCard = ({ id, title, description, image, price }) => {
@@ -62,9 +102,9 @@ const CheckoutCard = ({ id, title, description, image, price }) => {
       <Info>
         <h3>{title}</h3>
         <p>{description}</p>
-        <p>
+        <span>
           <b>${price}</b>
-        </p>
+        </span>
         <button>
           <b>Eliminar</b>
         </button>

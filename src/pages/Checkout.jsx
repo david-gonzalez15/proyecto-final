@@ -2,7 +2,7 @@ import React from "react";
 //dependencies
 import styled from "styled-components";
 //loyout
-import { LateralMenu } from "../layout/index";
+import { LateralMenu, MenuInferior } from "../layout/index";
 //components
 import { CheckoutCard, Total } from "../components/index";
 //styled components
@@ -13,10 +13,16 @@ const Container = styled.div`
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
+  @media (max-width: 768px) {
+    width: 100%;
+    padding: 8px;
+    box-sizing: border-box;
+  }
 `;
 const Checkout = () => {
   return (
     <>
+      <MenuInferior />
       <LateralMenu />
       <Container>
         <CheckoutCard

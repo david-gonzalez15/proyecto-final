@@ -3,7 +3,7 @@ import React from "react";
 import styled from "styled-components";
 import { Link } from "react-router-dom";
 //components
-import { LateralMenu } from "../layout/index.jsx";
+import { LateralMenu, MenuInferior } from "../layout/index";
 import { StoreCard } from "../components/index";
 //icons
 import { IconContext } from "react-icons";
@@ -20,13 +20,28 @@ const Container = styled.div`
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
+  padding: 0 0 0 45px;
+  @media (max-width: 500px) {
+    width: 100%;
+    padding: 5px;
+    box-sizing: border-box;
+  }
 `;
 const Products = styled.div`
-  max-width: 1000px;
-  margin: auto;
   width: 100%;
   display: grid;
+  gap: 10px;
+  box-sizing: border-box;
   grid-template-columns: repeat(5, 1fr);
+  @media (max-width: 1024px) {
+    grid-template-columns: repeat(4, 1fr);
+  }
+  @media (max-width: 768px) {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  @media (max-width: 300px) {
+    grid-template-columns: repeat(2, 1fr);
+  }
 `;
 const Navigation = styled.nav`
   display: flex;
@@ -44,11 +59,15 @@ const Menu = styled(Container)`
   width: 100%;
   justify-content: space-between;
   align-items: center;
-  padding: 0 30px;
   background: #000;
   height: 80px;
   border-radius: 0 0 20px 20px;
   margin-top: 50px;
+  @media (max-width: 500px) {
+    flex-direction: column;
+    flex-wrap: nowrap;
+    margin: 50px 0;
+  }
 `;
 const SubMenu = styled.nav`
   display: flex;
@@ -60,7 +79,10 @@ const Buscador = styled.div`
   padding: 5px;
   background: #141414;
   max-width: 400px;
-
+  margin: 20px 0;
+  @media (max-width: 450px) {
+    width: 100%;
+  }
   > input {
     border: none;
     outline: none;
@@ -68,6 +90,7 @@ const Buscador = styled.div`
     color: #fff;
     background: #141414;
     padding: 5px 15px;
+    width: 100%;
   }
   > button {
     background: #141414;
@@ -79,6 +102,7 @@ const Buscador = styled.div`
 const Store = () => {
   return (
     <>
+      <MenuInferior />
       <LateralMenu />
       <Container>
         <Navigation>
@@ -88,6 +112,7 @@ const Store = () => {
             <BiGame />
           </IconContext.Provider>
         </Navigation>
+
         <Menu>
           <SubMenu>
             <LinkMenu to="/">Explorar</LinkMenu>
@@ -100,6 +125,7 @@ const Store = () => {
             </button>
           </Buscador>
         </Menu>
+
         <Products>
           <StoreCard
             title="videojuegos"

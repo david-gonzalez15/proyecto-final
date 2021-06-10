@@ -1,7 +1,7 @@
 import React from "react";
 //dependencies
 import styled from "styled-components";
-import { LateralMenu } from "../layout/index";
+import { LateralMenu, MenuInferior } from "../layout/index";
 import { Carousel } from "../class-conponents/carrusel/index";
 import { createGlobalStyle } from "styled-components";
 import ArticulosRelacionados from "../components/ArticulosRelacionados";
@@ -20,6 +20,9 @@ const GlobalStyle = createGlobalStyle`
     background: #ccc;
     border-radius: 10px;
   }
+  @media (max-width: 768px) {
+        background: #fff;
+      }
   
 }
 `;
@@ -29,15 +32,35 @@ const Main = styled.div`
   display: flex;
   flex-direction: column;
   margin: auto;
+  padding: 0 0 0 45px;
+  box-sizing: border-box;
+  @media (max-width: 768px) {
+    width: 100%;
+    padding: 10px;
+  }
   article {
     text-align: justify;
     background: #fff;
     border: 1px solid #e1e1e1;
     padding: 40px 60px;
     border-radius: 20px;
+    @media (max-width: 768px) {
+      border: none;
+      padding: 20px 40px;
+    }
+    @media (max-width: 500px) {
+      border: none;
+      padding: 10px;
+    }
     p {
       color: #697477;
       font-size: 1.125em;
+      @media (max-width: 900px) {
+        font-size: 1em;
+      }
+      @media (max-width: 500px) {
+        font-size: 0.9sem;
+      }
     }
   }
 `;
@@ -69,6 +92,7 @@ const Articulo = () => {
   ];
   return (
     <>
+      <MenuInferior />
       <GlobalStyle />
       <CaruselContainer>
         <Carousel slides={slides} autoplay={true} interval={4000} />

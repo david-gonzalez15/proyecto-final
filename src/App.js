@@ -1,3 +1,8 @@
+//----------------------------------------------------
+//https://www.linkedin.com/in/david-gonzalez-portfolio/
+//https://github.com/david-gonzalez15/proyecto-final5gfr
+//---------------------------------------------------
+
 import React from "react";
 //dependencies
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
@@ -31,6 +36,20 @@ const GlobalStyle = createGlobalStyle`
   body::-webkit-scrollbar-thumb{
     background: #3B3C3D;
     border-radius: 10px;
+  }
+  @media (max-width:500px){
+    body::-webkit-scrollbar {
+    width: 5px; 
+    background: #000;        
+}
+  body::-webkit-scrollbar-thumb{
+    background: transparent;
+    border-radius: 10px;
+  }
+  body::-webkit-scrollbar-thumb:active{
+    background: #3B3C3D;
+    border-radius: 10px;
+  }
   }
 }
 `;

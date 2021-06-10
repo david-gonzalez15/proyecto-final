@@ -15,9 +15,16 @@ const ContainerHeader = styled(Container)`
   border-radius: 0 0 20px 20px;
   @media (max-width: 500px) {
     flex-direction: column;
+    height: 100px;
+    padding: 20px;
+    box-sizing: border-box;
   }
 `;
-const Logotipo = styled.h2``;
+const Logotipo = styled.h2`
+  @media (max-width: 500px) {
+    margin-top: 0px;
+  }
+`;
 const Item = styled(Link)`
   text-decoration: none;
   color: #fff;

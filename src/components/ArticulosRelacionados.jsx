@@ -11,6 +11,10 @@ const Container = styled.div`
   margin: auto;
   margin: 20px auto;
   justify-content: space-between;
+  overflow-x: scroll;
+  @media (max-width: 1024px) {
+    grid-template-columns: repeat(3, 1fr);
+  }
   ::-webkit-scrollbar {
     height: 9px;
     background: #ccc;

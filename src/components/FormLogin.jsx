@@ -13,12 +13,18 @@ const Container = styled.div`
   background: #141414;
   color: #fff;
   border-radius: 20px;
+  @media (max-width: 800px) {
+    width: 100%;
+    margin: 10px;
+  }
 `;
 const ImgContainer = styled.div`
   width: 50%;
   display: flex;
   justify-content: center;
-
+  @media (max-width: 600px) {
+    display: none;
+  }
   > img {
     width: 100%;
     max-width: 350px;
@@ -29,6 +35,12 @@ const ImgContainer = styled.div`
 `;
 const FormConntainer = styled.div`
   width: 50%;
+  @media (max-width: 600px) {
+    width: 100%;
+  }
+  @media (max-width: 300px) {
+    font-size: 0.8em;
+  }
 `;
 const Form = styled.form`
   display: flex;
@@ -38,6 +50,7 @@ const Form = styled.form`
   justify-content: space-between;
   align-items: center;
   box-sizing: border-box;
+
   input {
     width: 100%;
     padding: 15px 20px;
@@ -47,9 +60,6 @@ const Form = styled.form`
     background: #3b3c3d;
     color: #fff;
     outline: none;
-    ::placeholder {
-      color: #fff;
-    }
   }
   > button {
     margin-top: 10px;

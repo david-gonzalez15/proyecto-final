@@ -13,12 +13,18 @@ const Container = styled.div`
   background: #141414;
   color: #fff;
   border-radius: 20px;
+  @media (max-width: 800px) {
+    width: 100%;
+    margin: 10px;
+  }
 `;
 const ImgContainer = styled.div`
   width: 50%;
   display: flex;
   justify-content: center;
-
+  @media (max-width: 600px) {
+    display: none;
+  }
   > img {
     width: 100%;
     max-width: 350px;
@@ -31,6 +37,12 @@ const FormConntainer = styled.div`
   width: 50%;
   display: flex;
   align-items: center;
+  @media (max-width: 600px) {
+    width: 100%;
+  }
+  @media (max-width: 300px) {
+    font-size: 0.8em;
+  }
 `;
 const Form = styled.form`
   width: 100%;
@@ -50,9 +62,6 @@ const Form = styled.form`
     color: #fff;
     outline: none;
     box-sizing: border-box;
-    ::placeholder {
-      color: #fff;
-    }
   }
   > button {
     margin-top: 30px;

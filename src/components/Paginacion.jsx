@@ -6,6 +6,7 @@ import { FaArrowRight } from "react-icons/fa";
 const PaginacionElement = styled.div`
   display: flex;
   margin: 20px auto;
+  overflow-x: scroll;
 `;
 const LinkButton = styled(Link)`
   color: #fff;
@@ -16,6 +17,10 @@ const LinkButton = styled(Link)`
   border-radius: 10px;
   background: #000;
   margin: 0 10px;
+  @media (max-width: 425px) {
+    padding: 10px 15px;
+    border-radius: 5px;
+  }
 `;
 const Paginacion = () => {
   return (

@@ -167,47 +167,21 @@ const Home = () => {
           </Menu>
           <Products>
             <Poster
+              key={23}
+              title="Titulo del producto"
+              description="Descubre cientos de computadoras preensambladas listas para comprar"
+              image={img3}
+              price={234}
+            />
+            <ProductCard
+              key={12236435}
               id="12236435"
               title="Titulo del producto"
               description="Descubre cientos de computadoras preensambladas listas para comprar"
               image={img3}
+              price={234}
             />
-            <ProductCard
-              id="12236435"
-              title="Titulo del producto"
-              description="Descubre cientos de computadoras preensambladas listas para comprar"
-              image={img3}
-            />
-            <ProductCard
-              id="12236435"
-              title="Titulo del producto"
-              description="Descubre cientos de computadoras preensambladas listas para comprar"
-              image={img2}
-            />
-            <ProductCard
-              id="12236435"
-              title="Titulo del producto"
-              description="Descubre cientos de computadoras preensambladas listas para comprar"
-              image={img2}
-            />
-            <ProductCard
-              id="12236435"
-              title="Titulo del producto"
-              description="Descubre cientos de computadoras preensambladas listas para comprar"
-              image={img3}
-            />
-            <ProductCard
-              id="12236435"
-              title="Titulo del producto"
-              description="Descubre cientos de computadoras preensambladas listas para comprar"
-              image={img2}
-            />
-            <ProductCard
-              id="12236435"
-              title="Titulo del producto"
-              description="Descubre cientos de computadoras preensambladas listas para comprar"
-              image={img2}
-            />
+            
           </Products>
         </HomeContainer>
       </ContainerExt>

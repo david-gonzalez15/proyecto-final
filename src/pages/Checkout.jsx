@@ -1,7 +1,6 @@
 import React from "react";
 //dependencies
 import styled from "styled-components";
-import { useStateValue } from "../providers/StateProvider";
 //loyout
 import { LateralMenu, MenuInferior } from "../layout/index";
 //components
@@ -21,23 +20,35 @@ const Container = styled.div`
   }
 `;
 const Checkout = () => {
-
-  const [{ basket, user }, dispatch] = useStateValue();
   return (
     <>
       <MenuInferior />
       <LateralMenu />
       <Container>
-      {basket.map((item) => (
-            <CheckoutCard
-              id={item.id}
-              title={item.title}
-              image={item.image}
-              price={item.price}
-              
-            />
-          ))} 
-        
+        <CheckoutCard
+          title="videojuegos"
+          description="Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and "
+          price={234}
+          image="https://www.enter.co/wp-content/uploads/2021/05/cyberpunk-2077-3-scaled-1-768x432.jpg"
+        />
+        <CheckoutCard
+          title="videojuegos"
+          description="Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and "
+          price={234}
+          image="https://www.enter.co/wp-content/uploads/2021/05/cyberpunk-2077-3-scaled-1-768x432.jpg"
+        />
+        <CheckoutCard
+          title="videojuegos"
+          description="Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and "
+          price={234}
+          image="https://www.enter.co/wp-content/uploads/2021/05/cyberpunk-2077-3-scaled-1-768x432.jpg"
+        />
+        <CheckoutCard
+          title="videojuegos"
+          description="Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and "
+          price={234}
+          image="https://www.enter.co/wp-content/uploads/2021/05/cyberpunk-2077-3-scaled-1-768x432.jpg"
+        />
         <Total />
       </Container>
     </>

@@ -95,7 +95,7 @@ const ProductCard = ({ id, title, description, image }) => {
         </b>
 
         <div>
-          <LinkCard to="/product">
+          <LinkCard to="/">
             <b>Ver</b>
           </LinkCard>
           <button>

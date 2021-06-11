@@ -4,6 +4,8 @@ import styled from "styled-components";
 import { Link } from "react-router-dom";
 //components
 import { Container } from "../BasicComponents";
+import { auth } from "../firebase";
+
 //styled components
 const ContainerHeader = styled(Container)`
   display: flex;

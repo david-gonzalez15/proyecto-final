@@ -1,7 +1,9 @@
-import React from "react";
+import React, { useState } from "react";
 //dependencies
 import styled from "styled-components";
 import loginimg from "../assets/loginimg.png";
+import { Link, useHistory } from "react-router-dom";
+import { auth } from "../firebase";
 //styled components
 const Container = styled.div`
   max-width: 1000px;
@@ -116,16 +118,43 @@ const Button = styled.button`
 
 // #0cb7ec
 const FormRegister = () => {
+  const history = useHistory();
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+
+  const register = (e) => {
+    e.preventDefault();
+    auth
+      .createUserWithEmailAndPassword(email, password)
+      .then((auth) => {
+        console.log(auth);
+        if (auth) {
+          history.push("/");
+        }
+      })
+      .catch((error) => alert(error.message));
+  };
+
   return (
     <Container>
       <FormConntainer>
         <Form>
           <h2>Unete a nuestra comunidad</h2>
-          <input type="text" placeholder="Nombre" />
-          <input type="text" placeholder="Correo electronico" />
-          <input type="password" placeholder="Contraseña" />
 
-          <button>Registrarme</button>
+          <input
+            type="text"
+            placeholder="Correo electronico"
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
+          />
+          <input
+            type="password"
+            placeholder="Contraseña"
+            value={password}
+            onChange={(e) => setPassword(e.target.value)}
+          />
+
+          <button onClick={register}>Registrarme</button>
           <div className="l-social">
             <button>Facebook</button>
             <button>Google</button>

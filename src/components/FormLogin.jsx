@@ -1,7 +1,9 @@
-import React from "react";
+import React, { useState } from "react";
 //dependencies
 import styled from "styled-components";
 import loginimg from "../assets/loginimg.png";
+import { Link, useHistory } from "react-router-dom";
+import { auth } from "../firebase";
 //styled components
 const Container = styled.div`
   max-width: 1000px;
@@ -114,18 +116,41 @@ const Button = styled.button`
 
 // #0cb7ec
 const FormLogin = () => {
+  const history = useHistory();
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+
+  const signIn = (e) => {
+    e.preventDefault();
+    auth
+      .signInWithEmailAndPassword(email, password)
+      .then((auth) => {
+        history.push("/");
+      })
+      .catch((error) => alert(error.message));
+  };
+
   return (
     <Container>
       <FormConntainer>
         <Form>
-          <h2>Unete a nuestra comunidad</h2>
-          <input type="text" placeholder="Correo electronico" />
-          <input type="password" placeholder="Contraseña" />
-          <div className="terms">
-            <input type="checkbox" id="terms" />
-            <label htmlFor="terms">Terminos y condiciones</label>
-          </div>
-          <button>Registrarme</button>
+          <h2>Bienvenido de vuelta</h2>
+          <input
+            type="text"
+            placeholder="Correo electronico"
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
+          />
+          <input
+            type="password"
+            placeholder="Contraseña"
+            value={password}
+            onChange={(e) => setPassword(e.target.value)}
+          />
+
+          <button type="submit" onClick={signIn}>
+            inicirar Sesion
+          </button>
           <div className="l-social">
             <button>Facebook</button>
             <button>Google</button>

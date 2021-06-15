@@ -1,7 +1,7 @@
 import React from "react";
 //dependencies
 import styled from "styled-components";
-
+import { Link } from "react-router-dom";
 //styled components
 const Card = styled.div`
   display: flex;
@@ -34,6 +34,8 @@ const Info = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
+  color: #fff;
+  text-decoration: none;
   @media (max-width: 400px) {
     flex-direction: column;
   }
@@ -42,9 +44,11 @@ const Info = styled.div`
 const StoreCard = ({ title, price, image }) => {
   return (
     <Card>
-      <Img>
-        <img src={image} alt="" />
-      </Img>
+      <Link to="/product">
+        <Img>
+          <img src={image} alt="" />
+        </Img>
+      </Link>
       <Info>
         <p>{title}</p>
         <span>${price}</span>

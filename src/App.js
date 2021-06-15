@@ -3,7 +3,7 @@
 //https://github.com/david-gonzalez15/proyecto-final5gfr
 //---------------------------------------------------
 
-import React from "react";
+import React, { useEffect } from "react";
 //dependencies
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import { createGlobalStyle } from "styled-components";
@@ -22,6 +22,10 @@ import {
 } from "./pages/index";
 //layout
 import { Header } from "./layout/index";
+//firebase
+import { auth } from "./firebase";
+//provider
+import { useStateValue } from "./providers/StateProvider";
 //style
 const GlobalStyle = createGlobalStyle`
   body{
@@ -55,6 +59,24 @@ const GlobalStyle = createGlobalStyle`
 `;
 
 export default function App() {
+  const [{}, dispatch] = useStateValue();
+  useEffect(() => {
+    auth.onAuthStateChanged((authUser) => {
+      console.log("the user is", authUser);
+      if (authUser) {
+        // the user just logged in / the user was logged
+        dispatch({
+          type: "SET_USER",
+          user: authUser
+        });
+      } else {
+        dispatch({
+          type: "SET_USER",
+          user: null
+        });
+      }
+    });
+  }, []);
   return (
     <>
       <GlobalStyle />

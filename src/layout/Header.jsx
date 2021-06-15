@@ -4,6 +4,8 @@ import styled from "styled-components";
 import { Link } from "react-router-dom";
 //components
 import { Container } from "../BasicComponents";
+import { useStateValue } from "../providers/StateProvider";
+//firebase
 import { auth } from "../firebase";
 
 //styled components
@@ -37,6 +39,12 @@ const Menu = styled.nav`
 `;
 
 const Header = () => {
+  const [{ basket, user }, dispatch] = useStateValue();
+  const handleAuthentication = () => {
+    if (user) {
+      auth.signOut();
+    }
+  };
   return (
     <header>
       <ContainerHeader>
@@ -45,8 +53,10 @@ const Header = () => {
         </Item>
 
         <Menu>
-          <Item to="/login">Iniciar Sesion</Item>
-          <Item to="/register">Registrarme</Item>
+          <Item to={!user && "/login"} onClick={handleAuthentication}>
+            {user ? "Cerrar Sesión" : "Iniciar Sesión"}
+          </Item>
+          <Item to="/register">{user ? user.email : "Registrarme"}</Item>
         </Menu>
       </ContainerHeader>
     </header>

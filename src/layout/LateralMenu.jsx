@@ -8,6 +8,8 @@ import { AiFillHome } from "react-icons/ai";
 import { BiStore } from "react-icons/bi";
 import { RiShoppingCartLine } from "react-icons/ri";
 import { BsPeopleFill } from "react-icons/bs";
+
+import { useStateValue } from "../providers/StateProvider";
 //styled components
 const LateralCard = styled.div`
   display: flex;
@@ -36,8 +38,14 @@ const Menu = styled.div`
     left: 20px;
   }
 `;
+const Counter = styled.span`
+  color: #707070;
+  text-decoration: none;
+  font-size: 1rem;
+`;
 
 const LateralMenu = () => {
+  const [{ basket, user }, dispatch] = useStateValue();
   return (
     <Menu>
       <LateralCard>
@@ -48,9 +56,12 @@ const LateralMenu = () => {
           <Link to="/store">
             <BiStore />
           </Link>
-          <Link to="/checkout">
-            <RiShoppingCartLine />
-          </Link>
+          <div>
+            <Link to="/checkout">
+              <RiShoppingCartLine />
+            </Link>
+            <Counter>{basket?.length}</Counter>
+          </div>
           <Link to="/blog">
             <BsPeopleFill />
           </Link>

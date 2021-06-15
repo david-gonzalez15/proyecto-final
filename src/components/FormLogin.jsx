@@ -4,6 +4,7 @@ import styled from "styled-components";
 import loginimg from "../assets/loginimg.png";
 import { Link, useHistory } from "react-router-dom";
 import { auth } from "../firebase";
+
 //styled components
 const Container = styled.div`
   max-width: 1000px;
@@ -131,12 +132,13 @@ const FormLogin = () => {
   };
 
   return (
+
     <Container>
       <FormConntainer>
         <Form>
           <h2>Bienvenido de vuelta</h2>
           <input
-            type="text"
+            type="email"
             placeholder="Correo electronico"
             value={email}
             onChange={(e) => setEmail(e.target.value)}

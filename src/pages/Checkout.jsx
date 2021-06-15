@@ -1,4 +1,4 @@
-import React from "react";
+import React, { forwardRef } from "react";
 //dependencies
 import styled from "styled-components";
 //loyout
@@ -7,6 +7,7 @@ import { LateralMenu, MenuInferior } from "../layout/index";
 import { CheckoutCard, Total } from "../components/index";
 import { useStateValue } from "../providers/StateProvider";
 
+import FlipMove from "react-flip-move";
 //styled components
 const Container = styled.div`
   max-width: 1000px;

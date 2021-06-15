@@ -15,6 +15,7 @@ const Container = styled.div`
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
+  padding: 0 0 0 60px;
   @media (max-width: 768px) {
     width: 100%;
     padding: 8px;
@@ -33,6 +34,7 @@ const Checkout = () => {
             id={item.id}
             title={item.title}
             image={item.image}
+            description={item.description}
             price={item.price}
           />
         ))}

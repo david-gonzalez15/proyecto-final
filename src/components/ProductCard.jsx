@@ -92,6 +92,7 @@ const ProductCard = ({ id, title, description, image, price }) => {
         id: id,
         title: title,
         image: image,
+        description: description,
         price: price
       }
     });

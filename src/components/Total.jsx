@@ -1,5 +1,8 @@
 import React from "react";
 import styled from "styled-components";
+import CurrencyFormat from "react-currency-format";
+import { useStateValue } from "../providers/StateProvider";
+import { getBasketTotal } from "../reducers/reducer";
 
 const Container = styled.div`
   max-width: 1000px;
@@ -21,11 +24,24 @@ const Button = styled.button`
 `;
 
 const Total = () => {
+  const [{ basket }, dispatch] = useStateValue();
   return (
     <Container>
-      <p>
-        <b>Total a pagar: $243</b>
-      </p>
+      <CurrencyFormat
+        renderText={(value) => (
+          <>
+            <p>
+              subtotal({basket.length} items):
+              <strong>{value}</strong>
+            </p>
+          </>
+        )}
+        decimalScale={2}
+        value={getBasketTotal(basket)}
+        displayType={"text"}
+        thousandSeparator={true}
+        prefix={"$"}
+      />
       <Button>
         <b>Comprar Ahora</b>
       </Button>

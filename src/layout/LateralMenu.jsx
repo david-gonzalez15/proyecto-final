@@ -43,7 +43,7 @@ const LateralMenu = () => {
       <LateralCard>
         <IconContext.Provider value={{ color: "#707070", size: "2rem" }}>
           <Link to="/">
-            <AiFillHome color="#fff" />
+            <AiFillHome />
           </Link>
           <Link to="/store">
             <BiStore />

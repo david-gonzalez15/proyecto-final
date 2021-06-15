@@ -167,46 +167,53 @@ const Home = () => {
           </Menu>
           <Products>
             <Poster
-              id="12236435"
+              id="1223626"
               title="Titulo del producto"
               description="Descubre cientos de computadoras preensambladas listas para comprar"
               image={img3}
+              price={234}
             />
             <ProductCard
-              id="12236435"
+              id="12236471"
               title="Titulo del producto"
               description="Descubre cientos de computadoras preensambladas listas para comprar"
               image={img3}
+              price={6782}
             />
             <ProductCard
-              id="12236435"
+              id="122364987"
               title="Titulo del producto"
               description="Descubre cientos de computadoras preensambladas listas para comprar"
               image={img2}
+              price={233}
             />
             <ProductCard
-              id="12236435"
+              id="122364324"
               title="Titulo del producto"
               description="Descubre cientos de computadoras preensambladas listas para comprar"
-              image={img2}
+              image="https://es.thermaltake.com/pub/media/wysiwyg/key3/img/l20keyboard/titanium/03b.png"
+              price={234}
             />
             <ProductCard
-              id="12236435"
+              id="12236489"
               title="Titulo del producto"
               description="Descubre cientos de computadoras preensambladas listas para comprar"
               image={img3}
+              price={256}
             />
             <ProductCard
-              id="12236435"
+              id="12236"
+              title="Titulo del producto"
+              description="Descubre cientos de computadoras preensambladas listas para comprar"
+              image="https://www.asrock.com/Graphics-Card/photo/Radeon%20RX%206900%20XT%20OC%20Formula%2016GB(M1).png"
+              price={234}
+            />
+            <ProductCard
+              id="12236890"
               title="Titulo del producto"
               description="Descubre cientos de computadoras preensambladas listas para comprar"
               image={img2}
-            />
-            <ProductCard
-              id="12236435"
-              title="Titulo del producto"
-              description="Descubre cientos de computadoras preensambladas listas para comprar"
-              image={img2}
+              price={234}
             />
           </Products>
         </HomeContainer>

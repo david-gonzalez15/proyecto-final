@@ -2,6 +2,7 @@ import React from "react";
 //dependencies
 import { Link } from "react-router-dom";
 import styled from "styled-components";
+import { useStateValue } from "../providers/StateProvider";
 //components
 
 //styled components
@@ -94,6 +95,14 @@ const ImgContainer = styled.div`
   }
 `;
 const CheckoutCard = ({ id, title, description, image, price }) => {
+  const [{ basket }, dispatch] = useStateValue();
+
+  const removeFromBasket = () => {
+    dispatch({
+      type: "REMOVE_FROM_BASKET",
+      id: id
+    });
+  };
   return (
     <Card>
       <ImgContainer>
@@ -105,7 +114,7 @@ const CheckoutCard = ({ id, title, description, image, price }) => {
         <span>
           <b>${price}</b>
         </span>
-        <button>
+        <button onClick={removeFromBasket}>
           <b>Eliminar</b>
         </button>
       </Info>

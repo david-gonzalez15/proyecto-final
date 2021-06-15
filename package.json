@@ -13,6 +13,7 @@
     "js-doc": "0.5.0",
     "react": "17.0.2",
     "react-bootstrap": "1.6.0",
+    "react-currency-format": "1.0.0",
     "react-dom": "17.0.2",
     "react-icons": "4.2.0",
     "react-normalize": "0.4.4",

@@ -3,6 +3,7 @@ import React from "react";
 import styled from "styled-components";
 import { Link } from "react-router-dom";
 import { Button } from "react-bootstrap";
+import { useStateValue } from "../providers/StateProvider";
 
 //styled components
 const LinkCard = styled(Link)`
@@ -61,6 +62,7 @@ const Info = styled.div`
       padding: 10px;
       border: none;
       color: #0cb7ec;
+
       @media (max-width: 580px) {
         font-size: 0.8em;
         padding: 0px;
@@ -80,7 +82,21 @@ const ImgContainer = styled.div`
     border-radius: 20px;
   }
 `;
-const ProductCard = ({ id, title, description, image }) => {
+const ProductCard = ({ id, title, description, image, price }) => {
+  const [{ basket }, dispatch] = useStateValue();
+
+  const addToBasket = () => {
+    dispatch({
+      type: "ADD_TO_BASKET",
+      item: {
+        id: id,
+        title: title,
+        image: image,
+        price: price
+      }
+    });
+  };
+
   return (
     <Card>
       <ImgContainer>
@@ -91,14 +107,14 @@ const ProductCard = ({ id, title, description, image }) => {
         <p>{description}</p>
 
         <b>
-          $<span>324</span>
+          $<span>{price}</span>
         </b>
 
         <div>
           <LinkCard to="/product">
             <b>Ver</b>
           </LinkCard>
-          <button>
+          <button onClick={addToBasket}>
             <b>Agregar</b>
           </button>
         </div>
